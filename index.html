@@ -1,11 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>D-MAFIA | Elite Cricket Trading</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://connect.facebook.net">
+
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
@@ -15,11 +19,17 @@ padding:0;
 box-sizing:border-box;
 }
 
+html,
+body{
+width:100%;
+height:100%;
+}
+
 body{
 font-family:'Montserrat',sans-serif;
 background:#020202;
 overflow:hidden;
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
@@ -49,6 +59,7 @@ height:250px;
 background:#00ff8840;
 filter:blur(120px);
 animation:float 8s ease-in-out infinite;
+pointer-events:none;
 }
 
 .glow:nth-child(1){
@@ -78,6 +89,7 @@ background:#00ff99;
 border-radius:50%;
 opacity:.6;
 animation:particles 12s linear infinite;
+pointer-events:none;
 }
 
 @keyframes particles{
@@ -103,6 +115,7 @@ padding:20px;
 border:1px solid rgba(255,255,255,.08);
 background:rgba(255,255,255,.03);
 backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
 border-radius:28px;
 box-shadow:
 0 0 40px rgba(0,255,120,.12),
@@ -125,6 +138,7 @@ rgba(255,255,255,.12),
 transparent
 );
 animation:shine 5s infinite;
+pointer-events:none;
 }
 
 @keyframes shine{
@@ -254,8 +268,11 @@ filter:brightness(1.3);
 }
 }
 
+/* CTA */
+
 .cta{
 display:block;
+width:100%;
 margin-top:22px;
 text-decoration:none;
 text-align:center;
@@ -269,48 +286,95 @@ box-shadow:
 0 0 30px rgba(0,255,136,.5),
 0 0 60px rgba(0,255,136,.2);
 transition:.3s;
+cursor:pointer;
+position:relative;
+z-index:5;
 }
 
 .cta:hover{
 transform:translateY(-2px);
 }
 
+.cta:active{
+transform:translateY(0);
+}
+
+/* Footer */
+
+.managed{
+margin-top:10px;
+text-align:center;
+font-size:8px;
+letter-spacing:.4px;
+color:rgba(118,245,180,.55);
+font-weight:500;
+}
+
 .footer{
-margin-top:15px;
+margin-top:12px;
 display:flex;
 justify-content:space-between;
 font-size:10px;
 color:#9f9f9f;
 }
-
-.managed{
-margin-top:14px;
-text-align:center;
-font-size:11px;
-color:#76f5b4;
-font-weight:600;
-}
 </style>
- <!-- Meta Pixel Code -->
+
+
+<!-- =========================
+     META PIXEL
+========================= -->
+
 <script>
 !function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+{
+if(f.fbq)return;
+
+n=f.fbq=function(){
+n.callMethod ?
+n.callMethod.apply(n,arguments) :
+n.queue.push(arguments)
+};
+
+if(!f._fbq)f._fbq=n;
+
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+
+}(window, document, 'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1522135209670054');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
+
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
 src="https://www.facebook.com/tr?id=1522135209670054&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+alt=""
+/>
+</noscript>
+
+<!-- =========================
+     END META PIXEL
+========================= -->
+
 </head>
 
 <body>
+
+<!-- Background Effects -->
 
 <div class="glow"></div>
 <div class="glow"></div>
@@ -321,92 +385,143 @@ src="https://www.facebook.com/tr?id=1522135209670054&ev=PageView&noscript=1"
 <div class="particle" style="left:70%;animation-delay:1s"></div>
 <div class="particle" style="left:90%;animation-delay:3s"></div>
 
-<div class="container">
+
+<!-- Main Content -->
+
+<main class="container">
 
 <div class="badge">
 <div class="dot"></div>
 LIVE TELEGRAM ACCESS
 </div>
 
+
 <div class="top">
+
 <div>
 <h1>D-MAFIA</h1>
 <div class="subtitle">ELITE CRICKET TRADING</div>
 </div>
 
-<img src="logo.png" class="logo">
+<img
+src="logo.png"
+class="logo"
+alt="D-MAFIA Logo"
+>
+
 </div>
+
 
 <div class="desc">
 Premium cricket trading insights, smart entries,
 live alerts & expert market reads delivered instantly.
 </div>
 
+
 <div class="features">
+
 <div class="feature">⚡ Live Signals</div>
 <div class="feature">📈 Expert Reads</div>
 <div class="feature">🔥 Fast Alerts</div>
 <div class="feature">🏆 Premium Access</div>
+
 </div>
+
 
 <div class="stats">
 
 <div class="stat">
+
 <div class="label">
 <span>ACCURACY</span>
 <span>96.8%</span>
 </div>
+
 <div class="bar">
 <div class="fill" style="width:96.8%"></div>
 </div>
+
 </div>
 
+
 <div class="stat">
+
 <div class="label">
 <span>DAILY SIGNALS</span>
 <span>10+</span>
 </div>
+
 <div class="bar">
 <div class="fill" style="width:88%"></div>
 </div>
+
 </div>
 
+
 <div class="stat">
+
 <div class="label">
 <span>ACTIVE MEMBERS</span>
 <span>42K+</span>
 </div>
+
 <div class="bar">
 <div class="fill" style="width:92%"></div>
 </div>
+
 </div>
 
+
 <div class="stat">
+
 <div class="label">
 <span>SUCCESS RATE</span>
 <span>91%</span>
 </div>
+
 <div class="bar">
 <div class="fill" style="width:91%"></div>
 </div>
-</div>
 
 </div>
 
-<a href="https://t.me/+T6MBSp4dJSQwMzc1" class="cta">
+</div>
+
+
+<!--
+META EVENT SETUP TOOL FRIENDLY CTA
+
+The CTA is a normal anchor element with a unique ID,
+making it easier for Meta's setup interface to identify.
+-->
+
+<a
+id="telegram-cta"
+class="cta"
+href="https://t.me/+T6MBSp4dJSQwMzc1"
+target="_blank"
+rel="noopener noreferrer"
+>
 🔥 UNLOCK TODAY'S PREMIUM ENTRY →
 </a>
+
+
+<!-- Subtle Agency Branding -->
 
 <div class="managed">
 Ads Managed By Mahadev Growth Studio
 </div>
 
+
 <div class="footer">
+
 <span>🟢 Live Members Active</span>
 <span>✔ Verified Analyst</span>
-</div>
 
 </div>
+
+</main>
 
 </body>
 </html>
+```
